@@ -1,0 +1,95 @@
+$blue: #307BE1
+$Shadow: rgba(black,0.1)
+$orange: #F49C0E
+
+*
+    // border: solid 1px
+    font-family: '微軟正黑體'
+    -webkit-touch-callout: none
+    -webkit-tap-highlight-color: transparent
+    -webkit-touch-callout: none
+    -khtml-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+
+@mixin size($w,$h:$w)
+    width: $w
+    height: $h
+
+@mixin center
+    display: flex
+    justify-content: center
+    align-items: center
+
+html,body
+    +size(100%)
+    margin: 0
+    padding: 0
+    +center
+    z-index: -3
+    background-color: #333
+
+.scroll
+    +size(100%,5000px)
+
+.main
+    +size(700px,600px)
+    position: fixed
+    background-color: $blue
++center
+    overflow: hidden
+    z-index: -2
+    border-radius: 20px
+
+.chi
+    position: relative
+    bottom: -250px
+    transition: 0.5s
+    transform: scale(0.7)
+    cursor: pointer
+
+.hair
+    position: absolute
+    top: -30px
+    right: 220px
+.hand
+    position: absolute
+    top: 230px
+    right: 50px
+.beer
+    transition: 0.5s
+    position: absolute
+    top: 100px
+    right: 130px
+    z-index: -1
+    transform: rotate(-60deg)
+
+.face
+    position: absolute
+    top: 80px
+    right: 315px
+
+.eye, .eyebrow, .mouth
+    position: absolute
+.eyebrow
+    top: -5px
+    left: -5px
+.eye
+    top: 10px
+    left: 5px
+.eye_right
+    left: 28px
+.mouth
+    top: 28px
+
+// @media(max-width: 768px)
+// .chi
+//     transform: translateX(1.5rem) scale(0.5)
+//     bottom: -200px
+// .card
+//     width: 100vw
+//     height: 70vh
+//     &:hover
+//     .chi
+//         bottom: -150px
