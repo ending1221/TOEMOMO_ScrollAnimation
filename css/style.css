@@ -28,12 +28,12 @@ html, body {
   background-color: #333;
 }
 
-.outer {
+.scroll {
   width: 100%;
   height: 5000px;
 }
 
-.card {
+.main {
   width: 700px;
   height: 600px;
   position: fixed;
@@ -52,15 +52,9 @@ html, body {
   border-radius: 20px;
 }
 
-.card .title {
-  position: absolute;
-  color: white;
-  top: 80px;
-}
-
 .chi {
   position: relative;
-  bottom: -250px;
+  right: -800px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   -webkit-transform: scale(0.7);
@@ -68,65 +62,14 @@ html, body {
   cursor: pointer;
 }
 
-.chi .text {
-  position: absolute;
-  color: #F49C0E;
-  font-size: 40px;
-  top: -30px;
-  opacity: 0;
-  right: -80px;
-  -webkit-transform: rotate(-10deg);
-          transform: rotate(-10deg);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  -webkit-transition-delay: 0.5s;
-          transition-delay: 0.5s;
-}
-
-.chi .text:before {
-  content: "";
-  width: 50px;
-  height: 7px;
-  background-color: #F49C0E;
-  display: block;
-  -webkit-transform: rotate(-30deg);
-          transform: rotate(-30deg);
+.grass {
+  width: 100%;
   position: relative;
-  top: -10px;
-  left: -20px;
+  right: 0;
 }
 
-.chi .text:after {
-  content: "";
-  width: 50px;
-  height: 7px;
-  background-color: #F49C0E;
-  display: block;
-  -webkit-transform: rotate(30deg);
-          transform: rotate(30deg);
-  position: relative;
-  top: 10px;
-  left: -20px;
-}
-
-.chi:active .text {
-  opacity: 1;
-}
-
-.chi:active .beer {
-  right: 350px;
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-}
-
-.chi.scroll_100 .text {
-  opacity: 1;
-}
-
-.chi.scroll_100 .beer {
-  right: 350px;
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
+.d_none {
+  display: none;
 }
 
 .hair {
@@ -158,40 +101,25 @@ html, body {
   right: 315px;
 }
 
-.face .eye, .face .eye2, .face .eyebrow, .face .mouth {
+.eye, .eyebrow, .mouth {
   position: absolute;
 }
 
-.face .eyebrow {
+.eyebrow {
   top: -5px;
   left: -5px;
 }
 
-.face .eye, .face .eye2 {
+.eye {
   top: 10px;
   left: 5px;
 }
 
-.face .eye2 {
+.eye_right {
   left: 28px;
 }
 
-.face .mouth {
+.mouth {
   top: 28px;
-}
-
-@media (max-width: 768px) {
-  .chi {
-    -webkit-transform: translateX(1.5rem) scale(0.5);
-            transform: translateX(1.5rem) scale(0.5);
-    bottom: -200px;
-  }
-  .card {
-    width: 100vw;
-    height: 70vh;
-  }
-  .card:hover .chi {
-    bottom: -150px;
-  }
 }
 /*# sourceMappingURL=style.css.map */
