@@ -39,7 +39,6 @@ html,body
     background-color: $blue
     +center
     overflow: hidden
-    z-index: -2
     border-radius: 20px
 
 .chi
@@ -51,8 +50,12 @@ html,body
 
 .grass
     width: 100%
-    position: relative
+    position: absolute
     right: 0
+    bottom: 0
+
+.grass.down
+    bottom: -150px
 
 .d_none
     display: none
